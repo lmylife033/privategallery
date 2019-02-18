@@ -14,9 +14,9 @@ class SignupController extends Controller
     	return view('admin.signup.create');
     }
     public function create(Requst $request)
- {
- return redirect('admin/signup/create');
- }
+   {
+     return redirect('admin/signup/create');
+   }
 
   public function edit()
   {
