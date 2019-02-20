@@ -13,12 +13,7 @@ class CreateSignupTable extends Migration
      */
     public function up()
     {
-        Schema::create('signup', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('user');
-            $table->string('mail');
-            $table->timestamps();
-        });
+ 
     }
 
     /**
@@ -28,6 +23,6 @@ class CreateSignupTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('signup');
+
     }
 }
