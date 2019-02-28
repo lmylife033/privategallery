@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('signup');
 });
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+});
     Route::get('signup/create', 'Admin\SignupController@add');
     Route::post('signup/create', 'Admin\SignupController@create');
-});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
